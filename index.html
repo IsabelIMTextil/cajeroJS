@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero automático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <script language= "javascript">
+
+        function elige ()
+        {
+        var reiniciar= prompt("¿Desea realizar otra operación", "si o no");
+        if (reiniciar=="si")
+        {elige ();}
+        else
+        {document.write("Gracias por visitarnos")}
+        }
+              
+        
+        
+        function eleccion ()
+        {alert("¿Que operación desea realizar?\n1 Depositar\n2 Retirar\n3 Saldo");
+        var elegido= prompt ("Indique el numero de la operacion", "1, 2, 3 ");
+        
+        switch(elegido)
+        {
+        case("1"):
+        var meter= prompt("¿Cuánto dinero quiere depositar?", " ");
+        alert("La cantidad elegida es de " + meter);
+        var menu= prompt("¿Dedea realizar otra operación?", "si o no");
+        if (menu=="si")
+        {eleccion ();}
+        else
+        {document.write("Gracias por visitarnos")}
+        
+        
+        elige();
+        
+        
+        case("2"):
+        var sacar = prompt("¿Cuánto dinero quiere retirar?", " ");
+        var oportunidad=2;
+        for(i=1;i<2;i++)
+        {
+        if(sacar<75000)
+        {
+        alert("La operación es correcta");
+        var reiniciar= prompt("¿Quiere realizar otra operación?", "si o no ");
+        if (reiniciar=="si")
+        {eleccion();}
+        else
+        {document.write("Gracias por visitarnos");}
+        }
+        else
+        {
+        oportunidad--;
+        alert("No tienes tanto dinero. Tu saldo es de 75.000");
+        var cantidad= prompt("¿Cuanto dinero quiere sacar?", " ");
+        }
+        
+        if(oportunidad==1)
+        {
+        alert("No tiene suficiente saldo")
+        document.write("Gracias por su visita");
+        }
+        }
+        i=3;
+        break;
+        
+        
+        case("3"):
+        alert("Su saldo es de 75.000");
+        var menu2 = prompt("¿Quiere realizar otra operacion?", "si o no ");
+        if (menu2=="no")
+        {document.write("Gracias por visitarnos");}
+        else
+        {eleccion();}
+        i=3;
+        break;
+        
+        default:
+        alert("Esa opcion no existe");
+        var elige= prompt("¿Quiere realizar otra operación?", "si o no");
+        if (elige=="si")
+        {
+        var elige = prompt("Elija una operación");
+        }
+        else
+        {
+        document.write("Gracias por visitarnos")
+        }
+        n--;
+        break;
+        }
+        }
+        //password
+       alert ("La password es 123")
+         var contrasena= prompt ("Bienvenido al w/o Funds Bank. Ingrese su contraseña", " ");
+        var oportunidad=3;
+        for (i=1; i<3; i++)
+        
+        {
+        if (contrasena== "123")
+        {eleccion ();}
+        else
+        {
+        oportunidad--;
+        alert ("El pin no es correcto \nTienes "+
+        oportunidad+ " oportunidades más");
+        var contraseña= prompt ("Introduzca su contraseña",
+        " ");
+       if(oportunidad==0)
+        {alert("El pin no es correcto\n<b>Se acabaron las oportunidades</b> <hr>")}
+        }
+        
+       if(oportunidad==1)
+        {
+        alert("El pin no es correcto\nSe acabaron las oportunidades");
+        document.write("<table width=100 align=center bgcolor=white cellspacing=0> <tr> <td align=center> <font color=black size=4>Gracias por su visita</table>")
+        }
+        }
+        
+        </script>
+
+</body>
+</html>
